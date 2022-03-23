@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mishana\\source\\repos\\NoteApp\\NoteApp\\src\\NoteApp\\NoteApp.View\\NoteApp.View.csproj",
+      "projectUniqueName": "C:\\Users\\Mishana\\source\\repos\\NoteApp\\src\\NoteApp\\NoteApp.View\\NoteApp.View.csproj",
       "projectName": "NoteApp.View",
-      "projectPath": "C:\\Users\\Mishana\\source\\repos\\NoteApp\\NoteApp\\src\\NoteApp\\NoteApp.View\\NoteApp.View.csproj",
+      "projectPath": "C:\\Users\\Mishana\\source\\repos\\NoteApp\\src\\NoteApp\\NoteApp.View\\NoteApp.View.csproj",
       "packagesPath": "C:\\Users\\Mishana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mishana\\source\\repos\\NoteApp\\NoteApp\\src\\NoteApp\\NoteApp.View\\obj\\",
+      "outputPath": "C:\\Users\\Mishana\\source\\repos\\NoteApp\\src\\NoteApp\\NoteApp.View\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mishana\\AppData\\Roaming\\NuGet\\NuGet.Config",
