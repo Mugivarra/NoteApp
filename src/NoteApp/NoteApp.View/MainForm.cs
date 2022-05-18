@@ -41,5 +41,15 @@ namespace NoteApp.View
 		{
 
 		}
+
+		private void CategoryName_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

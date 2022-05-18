@@ -29,13 +29,10 @@ namespace NoteApp.View
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.listBox1 = new System.Windows.Forms.ListBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-			this.FileScriptBox = new System.Windows.Forms.ToolStripComboBox();
-			this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-			this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
 			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
 			this.comboBox2 = new System.Windows.Forms.ComboBox();
 			this.Created = new System.Windows.Forms.Label();
@@ -44,7 +41,8 @@ namespace NoteApp.View
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.CategoryName = new System.Windows.Forms.Label();
-			this.menuStrip2.SuspendLayout();
+			this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+			this.MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.SuspendLayout();
 			// 
 			// listBox1
@@ -80,37 +78,11 @@ namespace NoteApp.View
 			this.label1.Text = "Show category:";
 			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
-			// menuStrip2
-			// 
-			this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileScriptBox,
-            this.toolStripComboBox2,
-            this.toolStripComboBox3});
-			this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip2.Name = "menuStrip2";
-			this.menuStrip2.Size = new System.Drawing.Size(800, 27);
-			this.menuStrip2.TabIndex = 6;
-			this.menuStrip2.Text = "menuStrip2";
-			// 
-			// FileScriptBox
-			// 
-			this.FileScriptBox.AutoToolTip = true;
-			this.FileScriptBox.Name = "FileScriptBox";
-			this.FileScriptBox.Size = new System.Drawing.Size(75, 23);
-			this.FileScriptBox.Text = "File";
-			// 
-			// toolStripComboBox2
-			// 
-			this.toolStripComboBox2.Name = "toolStripComboBox2";
-			this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
-			// 
-			// toolStripComboBox3
-			// 
-			this.toolStripComboBox3.Name = "toolStripComboBox3";
-			this.toolStripComboBox3.Size = new System.Drawing.Size(121, 23);
-			// 
 			// richTextBox1
 			// 
+			this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.richTextBox1.Location = new System.Drawing.Point(227, 110);
 			this.richTextBox1.Name = "richTextBox1";
 			this.richTextBox1.Size = new System.Drawing.Size(561, 328);
@@ -180,6 +152,14 @@ namespace NoteApp.View
 			this.CategoryName.Size = new System.Drawing.Size(53, 15);
 			this.CategoryName.TabIndex = 14;
 			this.CategoryName.Text = "category";
+			this.CategoryName.Click += new System.EventHandler(this.CategoryName_Click);
+			// 
+			// MenuStrip
+			// 
+			this.MenuStrip.Name = "MenuStrip";
+			this.MenuStrip.Size = new System.Drawing.Size(61, 4);
+			this.MenuStrip.Tag = "";
+			this.MenuStrip.Text = "File";
 			// 
 			// MainForm
 			// 
@@ -197,11 +177,9 @@ namespace NoteApp.View
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.listBox1);
-			this.Controls.Add(this.menuStrip2);
 			this.Name = "MainForm";
 			this.Text = "Form1";
-			this.menuStrip2.ResumeLayout(false);
-			this.menuStrip2.PerformLayout();
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -212,10 +190,6 @@ namespace NoteApp.View
 		private System.Windows.Forms.ListBox listBox1;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.MenuStrip menuStrip2;
-		private System.Windows.Forms.ToolStripComboBox FileScriptBox;
-		private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
-		private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
 		private System.Windows.Forms.RichTextBox richTextBox1;
 		private System.Windows.Forms.ComboBox comboBox2;
 		private System.Windows.Forms.Label Created;
@@ -224,6 +198,8 @@ namespace NoteApp.View
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label CategoryName;
+		private System.ComponentModel.BackgroundWorker backgroundWorker2;
+		private System.Windows.Forms.ContextMenuStrip MenuStrip;
 	}
 }
 
